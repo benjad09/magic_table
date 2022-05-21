@@ -1,0 +1,202 @@
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square{
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+.circle{
+  position: relative;
+  top:1px;
+  right:1px;
+  height: 24px;
+  width: 24px;
+  background: #bfb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.background {
+    /*background-color: #BCBCBC;*/
+    position: relative;
+    top:0px;
+    right:0px;
+    width: 32px;
+    height: 32px;
+}
+
+.downslope {
+  width: 24px;
+  height: 0px;
+  top:0px;
+  right:0px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: red;
+  /*border-bottom: 1px solid red;*/
+  -webkit-transform:
+      translateY(5px)
+      translateX(-4px)
+      rotate(45deg); 
+  position: absolute;
+  /* top: -20px; */
+}
+
+.upslope {
+  width: 24px;
+  height: 0px;
+  top:0px;
+  right:0px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: red;
+  /*border-bottom: 1px solid red;*/
+  -webkit-transform:
+      translateY(5px)
+      translateX(-4px)
+      rotate(-45deg); 
+  position: absolute;
+  /* top: -20px; */
+}
+
+.hozline{
+  width: 16px;
+  height: 0px;
+  top:0px;
+  right:0px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: red;
+  /*border-bottom: 1px solid red;*/
+  -webkit-transform:
+      translateY(14px)
+      translateX(0px)
+      rotate(0deg); 
+  position: absolute;
+  /* top: -20px; */
+}
+
+.vertline{
+  width: 16px;
+  height: 0px;
+  top:0px;
+  right:0px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: red;
+  /*border-bottom: 1px solid red;*/
+  -webkit-transform:
+      translateY(6px)
+      translateX(8px)
+      rotate(90deg); 
+  position: absolute;
+  /* top: -20px; */
+}
+
+
+.smallcircle{
+
+  position: static;
+  height: 10px;
+  width: 10px;
+  background: #bfb;
+  border-radius: 50%;
+}
+
+
+.direction {
+  margin-left: 10px;
+  margin-top: 10px;
+  /*height:50px;*/
+  width:50px;
+  display: inline-block;
+  padding: 10px 0;  
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #000;
+  background-color: #e7e7e7;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  text-align: center;
+}
+
+.direction:hover {background-color: #b7b7b7}
+
+.direction:active {
+  background-color: #b7b7b7;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.control {
+  margin-left: 10px;
+  margin-top: 10px;
+  display: inline-block;
+  padding: 10px 0;  
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #000;
+  background-color: #e7e7e7;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  text-align: center;
+}
+
+.control:hover {background-color: #b7b7b7}
+
+.control:active {
+  background-color: #b7b7b7;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
